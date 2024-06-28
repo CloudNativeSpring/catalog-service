@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: catalog-service
+
+server:
+    port: 9001
+    tomcat:
+        # TCP 연결을 수락하고 실제로 HTTP 요청을 받기까지 톰캣이 최대한 기다리는 시간.
+        # DoS(Denial-of-Service) 공격을 방지하는 데 도움.
+        connection-timeout: 2s
+        # 새로운 HTTP 요청을 기다리는 동안 연결을 유지하는 시간.
+        keep-alive-timeout: 15s
+        threads:
+            # 최대 요청 처리 스레드 수(default = 200).
+            max: 50
+            # 쓰레드 풀(thread pool)에 항상 유지해야 하는 최소의 쓰레드 수(default = 10).
+            min-spare: 5
+
+polar:
+    greetings: Welcome to the local book catalog!
