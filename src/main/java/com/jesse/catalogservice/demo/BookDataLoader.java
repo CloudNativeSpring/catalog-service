@@ -31,8 +31,15 @@ public class BookDataLoader {
                 .author("Iorek Polarson")
                 .price(12.90)
                 .build();
+        Book book3 = Book.builder()
+                .isbn("1234567892")
+                .title("Cloud Native Spring")
+                .author("Thomas Vitale")
+                .price(14.90)
+                .build();
         bookRepository.save(book1);
         bookRepository.save(book2);
+        bookRepository.save(book3);
     }
     
 }
