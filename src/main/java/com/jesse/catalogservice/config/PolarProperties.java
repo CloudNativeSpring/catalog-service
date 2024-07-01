@@ -11,6 +11,6 @@ public class PolarProperties {
     /**
      * A message to welcome users.
      */
-    private String greetings;
+    private String greeting;
 
 }

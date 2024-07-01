@@ -17,9 +17,9 @@ public class Homecontroller {
     
     @GetMapping("/")
     public String getGreeting() {
-        log.info("getGreeting() msg: {}", polarProperties.getGreetings());
+        log.info("getGreeting() msg: {}", polarProperties.getGreeting());
         
-        return polarProperties.getGreetings();
+        return polarProperties.getGreeting();
     }
 
 }
