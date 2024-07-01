@@ -17,14 +17,14 @@ public class BookService {
         return bookRepository.findAll();
     }
     
-    public Book viewBookDetails(String isbn) throws BookNotFoundException {
+    public Book viewBookDetails(String isbn) {
         log.info("viewBookDetails(isbn={})", isbn);
         
         return bookRepository.findByIsbn(isbn)
                 .orElseThrow(() -> new BookNotFoundException(isbn));
     }
     
-    public Book addBookToCatalog(Book book) throws BookAlreadyExistsException {
+    public Book addBookToCatalog(Book book) {
         log.info("addBookToCatalog(book={})", book);
         
         if (bookRepository.existsByIsbn(book.getIsbn())) {
@@ -48,7 +48,7 @@ public class BookService {
                     entity.updateBook(book);
                     return bookRepository.save(entity);
                 })
-                .orElseGet(() -> bookRepository.save(book));
+                .orElseGet(() -> addBookToCatalog(book));
     }
     
 }
