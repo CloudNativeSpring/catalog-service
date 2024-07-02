@@ -57,5 +57,6 @@ public class Book {
         this.title = book.title;
         this.author = book.author;
         this.price = book.price;
+        this.publisher = book.publisher;
     }
 }
