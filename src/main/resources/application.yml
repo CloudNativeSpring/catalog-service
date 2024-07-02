@@ -34,9 +34,6 @@ spring:
     hikari:
       connection-timeout: 2000
       maximum-pool-size: 5
-  sql:
-    init:
-      mode: always
 
 server:
   port: 9001
@@ -53,4 +50,4 @@ server:
       min-spare: 5
 
 polar:
-  greetings: Welcome to the local book catalog!
+  greeting: Welcome to the local book catalog!

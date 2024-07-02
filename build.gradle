@@ -36,6 +36,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation 'org.springframework.retry:spring-retry'
+	implementation 'org.flywaydb:flyway-core'
+	implementation 'org.flywaydb:flyway-database-postgresql'
 	
 	compileOnly 'org.projectlombok:lombok'
 	
@@ -52,7 +54,6 @@ dependencies {
 	
 	testCompileOnly 'org.projectlombok:lombok'
 	
-//	testAnnotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	testAnnotationProcessor 'org.projectlombok:lombok'
     
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
