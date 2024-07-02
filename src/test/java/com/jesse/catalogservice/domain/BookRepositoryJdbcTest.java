@@ -10,6 +10,7 @@ import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jdbc.core.JdbcAggregateTemplate;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.jesse.catalogservice.config.DataConfig;
 
@@ -18,6 +19,7 @@ import com.jesse.catalogservice.config.DataConfig;
 @AutoConfigureTestDatabase(
         replace = AutoConfigureTestDatabase.Replace.NONE
 )
+@ActiveProfiles("integration")
 public class BookRepositoryJdbcTest {
 
     @Autowired
